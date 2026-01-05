@@ -10,7 +10,7 @@ Wer ist die Zielgruppe?
 Studenten
 
 Definieren Sie Ihr Unternehmen:
-Unternehmensname: Flow
+Unternehmensname: Flow Systems GmbH
 Standort: Wien,Österreich
 Anzahl der Mitarbeiter: 5
 
