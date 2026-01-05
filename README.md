@@ -1,4 +1,4 @@
-Link zur Website: 
+Link zur Website: https://maksymkutsym-design.github.io/Praxisbeispiel/
  
 Definieren Sie das Softwareprodukt (Businessanwendung, Videospiel, …) welches Sie im Internet vertreiben.
 Das ist das Softwareprodukt.
