@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow - Freemium</title>
+    <style>
+        
+        body {
+            margin: 0;
+            font-family: system-ui, "Segoe UI", Arial, sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        #sidebar {
+            width: 250px;
+            background-color: #000000;
+            padding: 40px 20px;
+            border-right: 1px solid #333;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 100;
+        }
+
+        #sidebar h2 { font-size: 24px; margin-top: 0; margin-bottom: 40px; color: #fff; letter-spacing: -1px; }
+        #sidebar a { color: #888; text-decoration: none; padding: 10px 0; display: block; font-size: 14px; transition: 0.3s; }
+        #sidebar a:hover { color: #fff; padding-left: 5px; }
+        
+        main {
+            margin-left: 250px;
+            width: 100%;
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            padding: 40px;
+        }
+        
+        .top-banner {
+            width: 100%;
+            max-width: 900px;
+            height: auto; 
+            display: block; 
+            border-radius: 8px;
+            border: 1px solid #333;
+            margin-bottom: 40px;
+            background-color: #1a1a1a;
+        }
+
+        .hero-container {
+            max-width: 900px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr; 
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 80px; 
+        }
+
+        h1 { font-size: 64px; line-height: 1; margin-bottom: 20px; letter-spacing: -2px; }
+        p.subtitle { font-size: 20px; line-height: 1.6; color: #bbb; margin-bottom: 40px; }
+
+        .buttons-container { display: flex; gap: 20px; align-items: center; }
+
+        .btn-pro {
+            background-color: #ffffff; color: #000000; border: 2px solid #ffffff;
+            padding: 15px 30px; font-size: 16px; font-weight: bold;
+            cursor: pointer; border-radius: 4px; transition: 0.2s;
+        }
+
+        .btn-pro:hover { opacity: 0.9; }
+
+        .btn-free {
+            background-color: transparent; color: #ffffff; border: 2px solid #555;
+            padding: 15px 30px; font-size: 16px; font-weight: bold;
+            cursor: pointer; border-radius: 4px; transition: 0.2s;
+        }
+        .btn-free:hover { border-color: #fff; }
+
+        .price-tag { font-size: 12px; color: #666; margin-top: 10px; text-align: center; }
+        
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo-image {
+            max-width: 250px; 
+            width: 100%;
+            height: auto;
+        }
+
+        .video-section {
+            width: 100%;
+            max-width: 900px;
+            margin-top: 20px;
+        }
+
+        .video-section h3 { margin-bottom: 20px; color: #666; font-weight: normal; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
+
+        video {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+
+        #cookie-banner {
+            position: fixed; bottom: 20px; right: 20px;
+            background-color: #fff; color: #000;
+            padding: 20px; width: 300px; font-size: 13px;
+            display: flex; flex-direction: column; gap: 15px;
+            z-index: 9999;
+        }
+        .cookie-actions button { padding: 8px 15px; cursor: pointer; font-weight: bold; font-size: 12px; }
+
+        .btn-accept { background: #000; color: #fff; border: none; }
+
+        .btn-decline { background: transparent; color: #000; border: 1px solid #000; }
+
+        @media (max-width: 768px) {
+            #sidebar { display: none; }
+            main { margin-left: 0; padding: 20px; }
+            .hero-container { grid-template-columns: 1fr; text-align: center; }
+            .buttons-container { justify-content: center; }
+            .logo-container { order: -1; margin-bottom: 20px; }
+        }
+
+    </style>
+</head>
+<body>
+
+    
+
+    <nav id="sidebar">
+        <h2>Flow</h2>
+        <a href="index.html" style="color: #fff; font-weight: bold;">Produkt</a>
+        <a href="about.html">About Us</a> <a href="credits.html">Credits</a>
+        <a href="license.html">Lizenz</a>
+        <a href="privacy.html">Datenschutz</a>
+        <a href="impressum.html">Impressum</a>
+    </nav>
+
+    <main>
+        <img src="image2.jpg" alt="Flow Workflow" class="top-banner">
+
+        <div class="hero-container">
+            <div class="text-content">
+                <h1>Get it<br>Done.</h1>
+                <p class="subtitle">
+                    Starten Sie kostenlos mit dem Basis-Paket oder verbessern Sie Ihre Produktivität mit Flow Pro.
+                </p>
+                
+                <div class="buttons-container">
+                    <div style="text-align: center;">
+                        <button class="btn-pro" onclick="buyProduct()">Flow Pro kaufen</button>
+                        <div class="price-tag">9,00 € (Lifetime)</div>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <button class="btn-free" onclick="downloadFree()">Gratis laden</button>
+                        <div class="price-tag">Basic Version</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="logo-container">
+                <img src="image1.jpg" alt="Flow Logo" class="logo-image">
+            </div>
+        </div>
+
+        <div class="video-section">
+            <h3>See Flow in Action</h3>
+            <video controls>
+                <source src="video.mp4" alt="Demo-Video" type="video/mp4">
+                Ihr Browser unterstützt dieses Video nicht.
+            </video>
+        </div>
+    </main>
+
+    <div id="cookie-banner">
+        <div>Wir nutzen Cookies für den Shop.</div>
+        <div class="cookie-actions">
+            <button class="btn-accept" onclick="closeCookie()">Akzeptieren</button>
+            <button class="btn-decline" onclick="closeCookie()">Ablehnen</button>
+        </div>
+    </div>
+
+    <audio id="buySound" src="sound.mp3"></audio>
+
+    <script>
+        function buyProduct() {
+            var audio = document.getElementById("buySound");
+            try { audio.play(); } catch (e) {}
+            setTimeout(function() { alert("Flow Pro wurde zum Warenkorb hinzugefügt."); }, 200);
+        }
+        function downloadFree() {
+            alert("Der kostenlose Download startet...");
+        }
+        function closeCookie() {
+            document.getElementById("cookie-banner").style.display = 'none';
+        }
+    </script>
+    
+</body>
+</html>
